@@ -18,9 +18,10 @@ public class TestBase {
 		Properties prop = new Properties();
 		prop.load(fis);
 		String URL= prop.getProperty("PractiseUrl");
-		String Browser=prop.getProperty("browser");
-		System.getProperty(Browser);
+		String Browser=prop.getProperty("browser"); //it will get properties from properties file
+		String Browser_Mvn=System.getProperty("browser");// it will be usefull for maven to run commands 
 		
+		String mavenBrowser=Browser_Mvn!=null?Browser_Mvn:Browser;
 		
 		if(driver == null) {
 			if(Browser.equalsIgnoreCase("chrome"))
