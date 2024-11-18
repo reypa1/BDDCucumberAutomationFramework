@@ -1,5 +1,5 @@
 Feature: Automation Practise page
-@Practise  @E2E
+@Practise 
 Scenario Outline: Validating Automation Practise page
  
  

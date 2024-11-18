@@ -30,7 +30,7 @@ public class AutomationPageObjects {
 		
 	}
 
-	//By Radio = By.xpath("//input[@value='radio2']");  -- Dummy
+	//By Radio = By.xpath("//input[@value='radio2']");
 	By RadioBtn=By.xpath("//input[@name='radioButton']");
 	By Dropdown=By.xpath("//select[@id='dropdown-class-example']");
 	By autosug=By.xpath("//input[@id='autocomplete']");
