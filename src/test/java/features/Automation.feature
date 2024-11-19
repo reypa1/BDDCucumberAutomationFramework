@@ -9,6 +9,8 @@ Scenario Outline: Validating Automation Practise page
  And pick <value> from Autosuggestion list
  And check the box <checkboxname> from list
  And Enter the <Text> click on Alert button
+ And click the window button
+ And click on show and hide buttons
  
  Examples:
  | name   | option  | value | checkboxname | Text |

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-18T07:00:13 IST" name="Default suite" finished-at="2024-11-18T07:00:32 IST" duration-ms="18430">
+  <suite started-at="2024-11-19T15:51:36 IST" name="Default suite" finished-at="2024-11-19T15:52:00 IST" duration-ms="23806">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGTestRunner@4d1bf319]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-18T07:00:13 IST" name="Default test" finished-at="2024-11-18T07:00:32 IST" duration-ms="18430">
+    <test started-at="2024-11-19T15:51:36 IST" name="Default test" finished-at="2024-11-19T15:52:00 IST" duration-ms="23806">
       <class name="cucumberOptions.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGTestRunner@4d1bf319]" started-at="2024-11-18T07:00:13 IST" name="setUpClass" finished-at="2024-11-18T07:00:14 IST" duration-ms="830" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGTestRunner@4d1bf319]" started-at="2024-11-19T15:51:36 IST" name="setUpClass" finished-at="2024-11-19T15:51:37 IST" duration-ms="685" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@53ed09e8]]>
+                <![CDATA[org.testng.TestRunner@19382338]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGTestRunner@4d1bf319]" started-at="2024-11-18T07:00:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-18T07:00:31 IST" duration-ms="17268" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGTestRunner@4d1bf319]" started-at="2024-11-19T15:51:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-19T15:51:59 IST" duration-ms="22634" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,10 +34,31 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Argument is of an illegal type: org.openqa.selenium.By$ByXPath]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Argument is of an illegal type: org.openqa.selenium.By$ByXPath
+at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:83)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+at PageObjects.AutomationPageObjects.scrollView(AutomationPageObjects.java:159)
+at stepDefinitions.AutomationStepDefinition.click_on_show_and_hide_buttons(AutomationStepDefinition.java:87)
+at ✽.click on show and hide buttons(file:///C:/Users/Pavan%20Kumar%20Muppa/Automation/SeleniumFrameworkDesign/BDDsampleProject/src/test/java/features/Automation.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGTestRunner@4d1bf319]" started-at="2024-11-18T07:00:31 IST" name="tearDownClass" finished-at="2024-11-18T07:00:32 IST" duration-ms="280" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGTestRunner@4d1bf319]" started-at="2024-11-19T15:51:59 IST" name="tearDownClass" finished-at="2024-11-19T15:52:00 IST" duration-ms="442" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

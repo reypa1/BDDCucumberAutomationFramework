@@ -1,6 +1,8 @@
 package PageObjects;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -38,6 +40,11 @@ public class AutomationPageObjects {
 	By CheckBox=By.xpath("//input[@type='checkbox']");
 	By EnterText=By.xpath("//input[@name='enter-name']");
 	By AlertButton=By.xpath("//input[@id='alertbtn']");
+	By windowbutton=By.xpath("//button[@id='openwindow']");
+	By Hidebutton=By.xpath("//input[@id='hide-textbox']");
+	By InputBox=By.xpath("//input[@id='displayed-text']");
+	By ShowButton=By.xpath("//input[@name='show-hide']");
+	By Header=By.xpath("//legend[text()='Web Table Fixed header']");
 
 	//Radio Button
 	public void RadioButton(String name) {
@@ -130,6 +137,41 @@ public class AutomationPageObjects {
 		AlertHandleAccept();
 		System.out.println("Alert handled success");
 		
+	}
+	
+	public void WindowHandles() throws Exception
+	{
+		driver.findElement(windowbutton).click();
+		Set<String>s1=driver.getWindowHandles();
+		Iterator<String>i1=s1.iterator();
+		String Parent=i1.next();
+		String child=i1.next();
+		driver.switchTo().window(child);
+		String childtitle=driver.getTitle();
+		System.out.println(childtitle);
+		driver.switchTo().window(Parent);
+		String Parenttitle=driver.getTitle();
+		System.out.println("landed in" +Parenttitle);
+		Thread.sleep(2000);
+	}
+	public void scrollView()
+	{
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Header);
+		
+		System.out.println("Scroll successfull");
+	}
+	
+	public void ShowAndHide() throws Exception
+	{
+		driver.findElement(Hidebutton).click();
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].style.display = 'none';", InputBox);
+		Thread.sleep(1000);
+		System.out.println("Show button hided");
+		driver.findElement(ShowButton).click();
+		js.executeScript("arguments[0].style.display='block';",InputBox);
+		Thread.sleep(1000);
+		driver.findElement(InputBox).sendKeys("veena");
 	}
 
 }

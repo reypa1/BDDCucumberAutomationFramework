@@ -73,6 +73,20 @@ public class AutomationStepDefinition {
     	autoPage.AlertPopUp(Text);
     	Thread.sleep(2000);
     }
+    
+    @And("click the window button")
+    public void click_the_window_button() throws Exception
+    {
+    	autoPage.WindowHandles();
+    	Thread.sleep(2000);
+    }
   
+    @And("click on show and hide buttons")
+    public void click_on_show_and_hide_buttons() throws Exception
+    {
+    	autoPage.scrollView();
+    	Thread.sleep(2000);
+    	
+    }
 
 }
